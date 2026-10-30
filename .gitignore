@@ -11,3 +11,5 @@ __pycache__/
 
 # Editor settings
 .vscode/
+# Week 02 generated ChromaDB database
+week-02/chroma_db/

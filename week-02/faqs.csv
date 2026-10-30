@@ -1,0 +1,11 @@
+id,question,answer,category
+1,How can I reset my password?,Click Forgot Password on the login page and follow the instructions.,Account
+2,How do I create a new account?,Open the registration page and complete the required form.,Account
+3,How can I change my email address?,Open your account settings and update your email address.,Account
+4,How do I pay for my order?,Choose an available payment method during checkout.,Payment
+5,What should I do if my payment fails?,Check your payment details and try again or contact your bank.,Payment
+6,How can I track my order?,Open your orders page and select the order you want to track.,Delivery
+7,How long does delivery take?,Delivery usually takes three to five business days.,Delivery
+8,How can I cancel my order?,Open your orders page and cancel the order if cancellation is available.,Orders
+9,How do I contact customer support?,Send an email to support@example.com for assistance.,Support
+10,How can I get a refund?,Open your orders page and follow the refund request instructions.,Orders
