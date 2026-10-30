@@ -10,20 +10,6 @@ A Python application that reads student scores from a CSV file, cleans and valid
 
 See the [Week 01 README](week-01/README.md) for setup instructions, cleaning rules, and expected results.
 
-## Repository Structure
-
-```text
-aws-sbg-tasks/
-├── README.md
-├── .gitignore
-├── requirements.txt
-└── week-01/
-    ├── README.md
-    ├── raw_data.csv
-    ├── student_performance_processor.py
-    └── student_performance_processor.ipynb
-```
-
 ## Tools and Technologies
 
 - Python
