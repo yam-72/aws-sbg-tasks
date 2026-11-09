@@ -3,7 +3,7 @@ from pathlib import Path
 
 import chromadb
 
-from src.embeddings import embed_texts
+from src.embeddings import embed_text, embed_texts
 
 
 # Store the database inside the week-04 directory
@@ -57,3 +57,34 @@ def store_chunks(
     )
 
     return len(chunks)
+def search_documents(query: str, n_results: int = 3) -> dict:
+    if not query or not query.strip():
+        raise ValueError("Search query cannot be empty.")
+
+    if n_results <= 0:
+        raise ValueError("Number of results must be greater than zero.")
+
+    total_documents = collection.count()
+
+    if total_documents == 0:
+        return {
+            "documents": [],
+            "metadatas": [],
+            "distances": []
+        }
+
+    # Convert the user's question into an embedding vector
+    query_embedding = embed_text(
+        query,
+        task_type="RETRIEVAL_QUERY"
+    )
+
+    # Search ChromaDB for similar document chunks
+    results = collection.query(
+        query_embeddings=[query_embedding],
+        n_results=min(n_results, total_documents),
+        include=["documents", "metadatas", "distances"]
+    )
+
+    return results
+
