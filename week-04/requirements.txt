@@ -1,0 +1,6 @@
+chromadb
+pypdf
+google-genai
+python-dotenv
+streamlit
+pytest
